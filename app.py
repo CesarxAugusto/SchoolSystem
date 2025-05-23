@@ -1,6 +1,7 @@
 import streamlit as st
 import datetime
 from validation_utils import cpf_validator, email_validator, phone_validator
+from controler import insert_student
 
 st.title('Gerenciamento de estudantes')
 st.header('Escolha uma das opções:')
@@ -39,7 +40,12 @@ if st.session_state.first_option == "inserir":
             for erro in erros:
                 st.error(erro)
         else:
-            st.success("Dados inseridos e salvos com sucesso")
+            success, message = insert_student(name=full_name, gender=gender, cpf=cpf,
+                                            status=status, phone=telefone, email=email)
+            if success:
+                st.success(message)
+            else:
+                st.error(message)
         
 
 elif st.session_state.first_option == "editar":
