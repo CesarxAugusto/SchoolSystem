@@ -1,0 +1,34 @@
+# Arquivos do Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Banco de dados SQLite (se for local e não essencial para o repositório)
+*.db
+*.sqlite3
+
+# Ambientes virtuais
+venv/
+env/
+.venv/
+.env/
+
+# Arquivos de configuração/sensíveis
+*.env
+.env.*
+
+# Arquivos de cache do Jupyter ou IPython (se usar)
+.ipynb_checkpoints
+
+# VSCode ou outros editores
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
